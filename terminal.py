@@ -19,6 +19,7 @@ class BrowserSimulator:
         self.forward_stack.clear()  # Clear forward history on new visit
 
         self.update_status()
+        
 
     def go_back(self):
         if not self.history:
