@@ -57,23 +57,27 @@ class DoublyLinkedList:
 
 class BrowserSimulator:
     def __init__(self):
-        self.history = DoublyLinkedList()  # Doubly linked list for back navigation
-        self.forward_stack = DoublyLinkedList()  # Doubly linked list for forward navigation
+        self.history = DoublyLinkedList() 
+         # Doubly linked list for back navigation
+        self.forward_stack = DoublyLinkedList()  
+        # Doubly linked list for forward navigation
         self.current_page = None
 
     def visit_page(self, page):
         if not page:
-            print("Invalid Input: Please enter a valid page URL.")
+            print("Invalid Input: URL.")
             return
 
         if self.current_page:
             self.history.append(self.current_page)
 
         if len(self.history) > 10:
-            self.history.pop_first()  # Limit the history to 10 entries
+            self.history.pop_first()  
+            # Limit the history to 10 entries
 
         self.current_page = page
-        self.forward_stack = DoublyLinkedList()  # Clear forward history on new visit
+        self.forward_stack = DoublyLinkedList()  
+        # Clear forward history on new visit
 
         self.update_status()
 
@@ -86,7 +90,8 @@ class BrowserSimulator:
         self.current_page = self.history.pop_last()
 
         if len(self.forward_stack) > 10:
-            self.forward_stack.pop_first()  # Limit the forward stack to 10 entries
+            self.forward_stack.pop_first()  
+            # Limit the forward stack to 10 entries
 
         self.update_status()
 
@@ -99,7 +104,8 @@ class BrowserSimulator:
         self.current_page = self.forward_stack.pop_last()
 
         if len(self.history) > 10:
-            self.history.pop_first()  # Limit the history to 10 entries
+            self.history.pop_first()  
+            # Limit the history to 10 entries
 
         self.update_status()
 
