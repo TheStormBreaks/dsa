@@ -67,46 +67,36 @@ class BrowserSimulator:
         if not page:
             print("Invalid Input: URL.")
             return
-
         if self.current_page:
             self.history.append(self.current_page)
-
         if len(self.history) > 10:
             self.history.pop_first()  
             # Limit the history to 10 entries
-
         self.current_page = page
         self.forward_stack = DoublyLinkedList()  
         # Clear forward history on new visit
-
         self.update_status()
 
     def go_back(self):
         if self.history.is_empty():
             print("No pages in history to go back to.")
             return
-
         self.forward_stack.append(self.current_page)
         self.current_page = self.history.pop_last()
-
         if len(self.forward_stack) > 10:
             self.forward_stack.pop_first()  
             # Limit the forward stack to 10 entries
-
         self.update_status()
 
     def go_forward(self):
         if self.forward_stack.is_empty():
             print("No pages in forward history to go forward to.")
             return
-
         self.history.append(self.current_page)
         self.current_page = self.forward_stack.pop_last()
-
         if len(self.history) > 10:
             self.history.pop_first()  
             # Limit the history to 10 entries
-
         self.update_status()
 
     def update_status(self):
