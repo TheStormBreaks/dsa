@@ -14,16 +14,20 @@ class BrowserSimulator:
             self.history.append(self.current_page)
         if len(self.history) > 10:
             self.history.pop(0)  
-        self.current_page = page  # Set the current page to the new page
-        self.forward_stack.clear()  # Clear forward history on new visit
+        self.current_page = page  
+        # Set the current page to the new page
+        self.forward_stack.clear()  
+        # Clear forward history on new visit
         self.update_status()  
 
     def go_back(self):
         if not self.history:
             print("No pages in history to go back to.")
             return  
-        self.forward_stack.append(self.current_page)  # Add current page to forward stack
-        self.current_page = self.history.pop()  # Pop the last page from history to current page
+        self.forward_stack.append(self.current_page) 
+         # Add current page to forward stack
+        self.current_page = self.history.pop() 
+         # Pop the last page from history to current page
         if len(self.forward_stack) > 10:
             self.forward_stack.pop(0)  
         self.update_status() 
@@ -32,8 +36,10 @@ class BrowserSimulator:
         if not self.forward_stack:
             print("No pages in forward history to go forward to.")
             return  
-        self.history.append(self.current_page)  # Add current page to history
-        self.current_page = self.forward_stack.pop()  # Pop the last page from forward stack to current page
+        self.history.append(self.current_page)  
+        # Add current page to history
+        self.current_page = self.forward_stack.pop()  
+        # Pop the last page from forward stack to current page
         if len(self.history) > 10:
             self.history.pop(0)  
         self.update_status()  
