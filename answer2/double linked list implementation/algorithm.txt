@@ -1,15 +1,13 @@
 class Node:
-    def __init__(self, page=None):
         self.page = page
         self.prev = None
         self.next = None
 
 class DoublyLinkedList:
-    def __init__(self):
         self.head = None
         self.tail = None
 
-    def append(self, page):
+    append(self, page):
         new_node = Node(page)
         if not self.head:
             self.head = self.tail = new_node

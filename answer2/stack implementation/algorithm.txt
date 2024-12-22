@@ -1,10 +1,9 @@
-class BrowserSimulator:
-    def __init__(self):
+BrowserSimulator:
         self.history = []  # Stack for back navigation
         self.forward_stack = []  # Stack for forward navigation
         self.current_page = None
 
-    def visit_page(self, page):
+    visit_page(self, page):
         if not page:
             print("Invalid Input: Please enter a valid page URL.")
             return
@@ -21,7 +20,7 @@ class BrowserSimulator:
         self.update_status()
         
 
-    def go_back(self):
+    go_back(self):
         if not self.history:
             print("No pages in history to go back to.")
             return
@@ -34,7 +33,7 @@ class BrowserSimulator:
 
         self.update_status()
 
-    def go_forward(self):
+    go_forward(self):
         if not self.forward_stack:
             print("No pages in forward history to go forward to.")
             return
@@ -47,7 +46,7 @@ class BrowserSimulator:
 
         self.update_status()
 
-    def update_status(self):
+    update_status(self):
         if self.current_page:
             print(f"Current Page: {self.current_page}")
         else:
