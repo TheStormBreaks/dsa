@@ -1,0 +1,43 @@
+class SportspersonArray:
+    __init__:
+        sportspersons = initial_list
+
+    get_length:
+        return len(sportspersons)
+
+    add at end:
+        sportspersons.append(sportsperson)
+
+    add after second:
+        sportspersons.remove(sportsperson)
+        sportspersons.insert(2, sportsperson) 
+
+    replace two sportspersons:
+        for person in remove list:
+            if person in sportspersons:
+                sportspersons.remove(person) 
+        sportspersons.extend
+
+    sort_sportspersons:
+        sportspersons.sort
+
+    print_sportspersons:
+        print Sportspersons
+
+
+favourite sportspersons = SportspersonArray
+            (["Hamilton", "Vettel", "Leclerc", "Sainz", "Ricciardo"])
+
+
+favourite sportspersons.add at end("Yuki")
+favourite sportspersons.print sportspersons()
+
+favourite sportspersons.add after second("Yuki")
+favourite sportspersons.print sportspersons()
+
+favourite sportspersons.replace two sportspersons
+            (["Ricciardo", "Leclerc"], ["Schumacher", "Senna"])
+favourite sportspersons.print sportspersons()
+
+favourite sportspersons.sort sportspersons()
+favourite sportspersons.print sportspersons() 

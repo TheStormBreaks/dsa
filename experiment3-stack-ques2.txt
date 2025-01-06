@@ -1,0 +1,44 @@
+class Stack:
+    __init__:
+        items = []
+    
+    push:
+        items.append(item) 
+    
+    pop:
+        if is_empty is false:
+            return items.pop()
+        return None
+    
+    peek:
+        if is_empty is false:
+            self.items[-1] 
+        return None
+    
+    is_empty:
+        return len(items) == 0  
+    
+    size:
+        return len(items)  
+
+isit_balanced:
+    create Stack()
+    matching_pairs = {')': '(', '}': '{', ']': '['}
+    
+    for char in string:
+        Begin
+        if char in ({[:
+            push(char)
+        elif char in )}]:
+            if 
+            stack is_empty or 
+            stack pop() != matching_pairs:
+                return False
+        End
+    
+    return stack.is_empty()
+
+print(is it balanced("{[()]}"))  # True
+print(is it balanced("{[(])}"))  # False
+print(is it balanced("{{[[(())]]}}"))  # True
+print(is it balanced(""))  # True
