@@ -1,0 +1,89 @@
+class Node:
+    def init:
+        data, left, right
+
+
+class BST:
+    def init:
+        root = None
+
+    def insert(self, data):
+        if root is None:
+            root = Node(data)
+        else:
+            insert(data)
+
+    def insert:
+        if data < current.data:
+            if left is None:
+                left = Node(data)
+            else:
+                insert(data)
+        else:
+            if right is None:
+                right = Node(data)
+            else:
+                insert(data)
+
+    def height:
+        if not node:
+            return -1 
+        leftheight = height(node.left)
+        rightheight = height(node.right)
+        return 1 + max(leftheight, rightheight)
+
+    def delete:
+        root = delete(data)
+
+    def delete:
+        if data < node.data:
+            node.left = delete(data)
+        elif data > node.data:
+            node.right = delete(data)
+        else:
+           not node.right:
+                return node.left
+            temp = minvaluenode(node.right)
+            node.data = temp.data
+            node.right = delete(temp.data)
+        return node
+
+    def minvaluenode:
+        current = node
+        while current.left:
+            current = current.left
+        return current
+
+    def is_balanced:
+        if not node:
+            return True
+        left_height = height(node.left)
+        right_height = height(node.right)
+        if abs(left_height - right_height) > 1:
+            return False
+        return isbalanced(node.left) and isbalanced(node.right)
+
+    def inorder:
+        if node:
+            inorder(node.left)
+            print(node.data, end=" ")
+            self.in_order(node.right)
+
+
+bst = BST()
+
+values = [12, 35, 14, 97, 36, 65, 89]
+for value in values:
+    bst.insert(value)
+roll_number_last_two_digits = 12 
+bst.insert(roll_number_last_two_digits)
+
+
+tree_height = bst.height(bst.root)
+print(f"Height of the BST: {tree_height}")
+
+
+bst.delete(14)  
+bst.in_order(bst.root)
+is_bal = bst.is_balanced(bst.root)
+

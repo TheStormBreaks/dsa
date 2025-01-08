@@ -1,0 +1,33 @@
+class Stack:
+    push:
+        append(value)
+
+    pop:
+        if stack is not empty:
+            Begin 
+                return stack.pop
+            End
+        else:
+            Begin
+                Error Pop from an empty stack
+
+    stack is empty:
+        len(self.stack) == 0
+
+
+reverse a name:
+    create a Stack
+
+    for characters in the name
+        push the character
+
+    reversed name variable is created
+    while stack is not empty():
+        reversed name += popped element of stack
+
+    print reversed_name
+
+name that we want to reverse = "Jayce Arcane"
+reversed name = reverse a name(variable name that we want to reverse)
+print Original Name
+print Reversed Name

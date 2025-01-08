@@ -1,0 +1,78 @@
+import random
+
+class Node:
+    def init:
+        data, left, right = None
+
+class FullBinaryTree:
+    def init:
+        self.root = None
+
+    def construct_full_binary_tree(self, n=10, min_value=1, max_value=100):
+        values = random.randint(min_value, max_value)
+        self.root = constructtree(values, 0)
+
+    def _construct_tree(self, values, index):
+        if index < len(values):
+            node.left = constructtree(values, 2 * index + 1)
+            node.right = constructtree(values, 2 * index + 2)
+            return node
+        return None
+
+    def find_min:
+        return min(data, findmin(node.left), findmin(node.right))
+
+    def findmax:
+        return max(data, findmax(node.left), findmax(node.right))
+
+    def calculatesum:
+        if not node:
+            return 0
+        return data + calculatesum(node.left) + calculatesum(node.right)
+
+    def pre_order_traversal(self, node):
+        stack = []
+        current = node
+        while stack or current:
+            if current:
+                stack.append(current)
+                current = current.left
+            else:
+                current = stack.pop()
+                current = current.right
+
+    def post_order_traversal(self, node):
+        stack1 = []
+        stack2 = []
+        if node:
+            stack1.append(node)
+        while stack1:
+            current = stack1.pop()
+            stack2.append(current)
+            if current.left:
+                append(current.left)
+            if current.right:
+                append(current.right)
+        
+
+    def inordertraversal:
+        stack = []
+        current = node
+        while stack or current:
+            if current:
+                stack.append(current)
+                current = current.left
+            else:
+                current = stack.pop()
+                current = current.right
+main:
+    fbt = FullBinaryTree()
+
+    constructfullbinarytree()
+
+    inordertraversal(root)
+    preordertraversal(root)
+    postordertraversal(root)
+    print(findmin(root))
+    print(findmax(root))
+    print(calculate_sum(root))

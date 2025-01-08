@@ -1,0 +1,25 @@
+class EvenNumbersArray
+    init
+        even_numbers = []
+
+    generate even numbers
+        if x > y:
+            print x should be less than y.
+        for num in range(x, y + 1)
+            if num % 2 == 0:
+                even numbers.append(num) 
+
+    print even numbers:
+        print even numbers
+
+    get length:
+        return len(even numbers)
+
+x = 19  
+y = 51 
+even numbers array = EvenNumbersArray()
+
+even numbers array.generate even numbers(x, y)
+
+even  numbers array.print even numbers()
+print even numbers array.get length()

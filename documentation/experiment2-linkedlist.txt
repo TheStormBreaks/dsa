@@ -1,0 +1,90 @@
+class Node:
+    init(self):
+        data, next, prev
+
+class CircularDoublyLinkedList:
+    init(self):
+        head = None
+    
+    insert_values:
+        for data in list:
+            append(data)
+    
+    append:
+        new_node = Node
+        if head is None:
+            head = new_node
+            head.next = head
+            head.prev = head
+        else:
+            tail = head.prev
+            tail.next = new node
+            new node.prev = tail
+            new node.next = head
+            head.prev = new node
+    
+    insert after value:
+        current = head
+        while True:
+            if current.data == data_after:
+                new_node.next = current.next
+                new_node.prev = current
+                current.next.prev = new node
+                current.next = new node
+                return
+            current = current.next
+            if current == head:  
+                break
+        print Value not found
+    
+    remove by value:
+        current = head
+        while True:
+            if current.data == data:
+                if current.next == current:  
+                    head = None
+                else:
+                    current.prev.next = current.next
+                    current.next.prev = current.prev
+                    if current == self.head:  
+                        self.head = current.next
+                return
+            current = current.next
+            if current == self.head: 
+                break
+        print Value not found
+    
+    print forward:
+        current = head
+        result = []
+        while True:
+            append data
+            current = current.next
+        print(result)
+    
+    def print_backward:
+        current = head.prev 
+        result = []
+        while True:
+            append(current.data)
+            current = current.prev
+        print(result)
+
+
+
+LL = CircularDoublyLinkedList()
+insert_values(["Red", "Yellow", "Purple", "Orange"])
+print forward()
+insert after value("Yellow", "Blue") 
+print forward()
+remove by value("Orange")  
+print forward()
+remove by value("Green")  
+print forward()
+remove by value("Red")
+remove by value("Yellow")
+remove by value("Blue")
+remove by value("Purple")
+print forward()
+print forward()
+print backward()

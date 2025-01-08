@@ -1,0 +1,45 @@
+import heapq
+
+class MaxHeap:
+    init:
+        self.heap = []
+
+    def buildheap:
+        heap = [-el for el in elements] 
+        heapify(heap)
+
+    def insert:
+        heappush(self.heap, -value)
+
+    def findmax:
+        return -self.heap[0] if self.heap else None
+
+    def delete_max(self):
+        return -heapq.heappop(self.heap) if self.heap else None
+
+    def print_heap:
+        print([-el for el in self.heap])
+
+__main__:
+    elements = [10, 12, 14, 16, 18, 20]
+    heap = MaxHeap()
+    heap.buildheap(elements)
+
+    print("Initial Max Heap:")
+    heap.print_heap()
+
+    
+    roll_number = 412012  
+    sum_of_digits = sum(digit)
+    heap.insert(sum_of_digits)
+    heap.print_heap()
+
+    max_element = heap.find_max()
+    print(max_element)
+
+    deleted_1 = heap.delete_max()
+    print(deleted_1)
+    heap.print_heap()
+    deleted_2 = heap.delete_max()
+    print(deleted_2)
+    heap.print_heap()

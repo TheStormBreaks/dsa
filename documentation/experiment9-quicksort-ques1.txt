@@ -1,0 +1,27 @@
+import time
+
+def quick sort:
+    if len <= 1:
+        return arr
+    
+    pivot = arr[-1]
+
+    if x <= pivot
+    left = [x in arr[:-1]]
+
+    if x > pivot
+    right = [x in arr[:-1]]
+    
+    return quick sort(left) + [pivot] + quick sort(right)
+
+main
+    unsorted array = [12, 7, 5, 9, 3, 11, 1, 4, 10, 8]
+
+    start time = time()
+    sorted array = quick sort(unsorted array)
+    end time = time()
+
+    print(unsorted array)
+    print(sorted array)
+    time taken = end_time - start_time:.6f 
+    print(time taken)
